@@ -254,7 +254,7 @@ async def analyze_video_with_gemini(video_path: str) -> dict:
 # ===============================
 # 🎵 음악 생성 (Google Lyria 전용) — 종료 보장 & 로그 강화
 # ===============================
-async def generate_music(analysis_result: dict, capture_seconds: int = 8) -> str:
+async def generate_music(analysis_result: dict, capture_seconds: int = 180) -> str:
     """
     Google Lyria 실시간 스트리밍으로 음악 생성 후,
     capture_seconds 동안 받은 오디오를 파일로 저장합니다.
