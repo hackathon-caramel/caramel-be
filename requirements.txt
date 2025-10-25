@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+gunicorn
+python-dotenv
+httpx
+google-generativeai
+SQLAlchemy
+mysql-connector-python
+sqlalchemy-utils
+python-multipart
+moviepy
