@@ -1,0 +1,48 @@
+===========================================
+API 서버 정보
+===========================================
+
+API Base URL: http://172.31.252.156:8000
+API 문서: http://172.31.252.156:8000/docs
+
+===========================================
+주요 엔드포인트
+===========================================
+
+1. 영상 업로드 및 처리
+   POST http://172.31.252.156:8000/upload-video
+   Content-Type: multipart/form-data
+   Body: file (영상 파일)
+   지원 형식: .mp4, .avi, .mov, .mkv, .webm
+
+2. 음악 다운로드
+   GET http://172.31.252.156:8000/files/music/{filename}
+
+3. 썸네일 다운로드
+   GET http://172.31.252.156:8000/files/thumbnail/{filename}
+
+4. 영상 다운로드
+   GET http://172.31.252.156:8000/files/video/{filename}
+
+5. 서버 상태 확인
+   GET http://172.31.252.156:8000/health
+
+===========================================
+응답 예시
+===========================================
+{
+  "success": true,
+  "message": "처리 완료!",
+  "data": {
+    "video_analysis": {
+      "labels": ["nature", "outdoor"],
+      "mood": "calm",
+      "description": "Video with themes: nature, outdoor"
+    },
+    "files": {
+      "video": "/files/video/xxxxx.mp4",
+      "music": "/files/music/xxxxx.mp3",
+      "thumbnail": "/files/thumbnail/xxxxx.png"
+    }
+  }
+}
